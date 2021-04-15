@@ -1,1 +1,17 @@
 /* PHASE 0: Sidebar */
+
+
+.profile-picture {
+    position: relative;
+    top: -120px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.profile-info {
+
+}
+
+.profile-nav {
+
+}
