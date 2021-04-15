@@ -4,9 +4,7 @@
   overflow: hidden;
 }
 
-
-
-div.online {
+.online {
   display: block;
   position: absolute;
   top: -10px;

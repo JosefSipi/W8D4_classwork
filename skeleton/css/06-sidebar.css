@@ -28,17 +28,15 @@
 
 
 .profile-nav a {
-    /* padding: 10px; */
     font-weight: bold;
     display: block;
-    /* border-top: 10px grey; */
     padding: 5px;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(198, 198, 198);
     
 }
 
 .profile-nav:last-child {
-    border-bottom: 1px solid grey;
+    border-bottom:  1px solid rgb(198, 198, 198);
     margin-bottom: 20px;
 }
 
