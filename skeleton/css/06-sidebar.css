@@ -1,7 +1,12 @@
 /* PHASE 0: Sidebar */
-
+.content-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .profile-picture {
+    
     position: relative;
     margin-top: -120px;
     border-radius: 10px;
@@ -12,18 +17,21 @@
 
 }
 
-.profile-nav {
-
+.profile-nav a {
+    /* padding: 10px; */
     font-weight: bold;
-    
-    > li {
-        border-top: 1px rgb(160, 160, 160);
-        
-    }
+    display: block;
+    /* border-top: 10px grey; */
+    padding: 5px;
+    border-top: 1px solid grey;
     
 }
 
+.profile-nav:last-child {
+    border-bottom: 1px solid grey;
+}
+
 .profile-nav:hover {
-    
+
 
 }
