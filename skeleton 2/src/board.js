@@ -9,6 +9,19 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  const startGrid = [];
+   for (let col = 0; col < 8; col++) {
+     const columns = [];
+     for (let row = 0; row < 8; row++){
+       columns.push("");
+     };
+     startGrid.push(columns);
+   };
+    startGrid[3][4] = "B";
+    startGrid[4][3] = "B";
+    startGrid[3][3] = "W";
+    startGrid[4][4] = "W";
+   return startGrid
 }
 
 /**
