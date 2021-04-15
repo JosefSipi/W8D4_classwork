@@ -109,27 +109,32 @@ Board.prototype.isOccupied = function (pos) {
 // ];
 
 Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
-  debugger
+  // debugger
+  
+  if (!piecesToFlip) {
+    // debugger
+    piecesToFlip = [];
+  } else {
+    piecesToFlip.push(pos);
+  };
+  
   let x = pos[0];
   let y = pos[1];
 
   let dirX = dir[0];
   let dirY = dir[1];
 
-  if (this.grid[x][y].color === color) {
-    debugger
-    return [x, y];
-  } else {
-    debugger
+  let newPos = [x + dirX, y + dirY];
+  // debugger
+  if (!this.isValidPos(newPos)) {
     return [];
-  };
-
-  let arr = [];
-  let newPos = this.grid[x + dirX][y + dirY];
-  debugger
-  let newEle = this._positionsToFlip(newPos, color, dir, piecesToFlip)
-  arr.push(newEle);
-  return arr;
+  } else if (!this.isOccupied(newPos)) {
+    return [];
+  } else if (this.isMine(newPos, color)) {
+    return piecesToFlip.length === 0 ? [] : piecesToFlip;
+  } else {
+    return this._positionsToFlip(newPos, color, dir, piecesToFlip);
+  }
 };
 
 /**
@@ -138,6 +143,12 @@ Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
  * color being flipped.
  */
 Board.prototype.validMove = function (pos, color) {
+    this.DIRS 
+  if (!this.isOccupied(pos) && this.){
+
+    }
+
+
 };
 
 /**
