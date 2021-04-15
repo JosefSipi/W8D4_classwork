@@ -13,15 +13,16 @@ function _makeGrid () {
    for (let col = 0; col < 8; col++) {
      const columns = [];
      for (let row = 0; row < 8; row++){
-       columns.push("");
+       columns.push(undefined);
      };
      startGrid.push(columns);
-   };
-    startGrid[3][4] = "B";
-    startGrid[4][3] = "B";
-    startGrid[3][3] = "W";
-    startGrid[4][4] = "W";
-   return startGrid
+  };
+
+  startGrid[3][4] = new Piece('black');
+  startGrid[4][3] = new Piece('black');
+  startGrid[3][3] = new Piece('white');
+  startGrid[4][4] = new Piece('white');
+  return startGrid
 }
 
 /**
@@ -41,6 +42,8 @@ Board.DIRS = [
  * Checks if a given position is on the Board.
  */
 Board.prototype.isValidPos = function (pos) {
+  let range = [0, 1, 2, 3, 4, 5, 6, 7];
+  return range.includes(pos[0]) && range.includes(pos[1])
 };
 
 /**
